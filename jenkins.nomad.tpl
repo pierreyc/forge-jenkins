@@ -11,10 +11,7 @@ job "${nomad_namejob}" {
   }
 
   group "jenkins" {
-    constraint {
-      attribute = "${attr.unique.network.ip-address}"
-      value     = "10.0.71.193"
-    }
+
     count = 1
 
     restart {
